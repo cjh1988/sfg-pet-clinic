@@ -13,7 +13,7 @@ public class Visit extends BaseEntity{
     @Column(name="description")
     private  String description;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="pet_id")
     private Pet pet;
 
